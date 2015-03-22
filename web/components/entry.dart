@@ -16,7 +16,7 @@ class EntryProps {
 class Entry extends Component<EntryProps> {
   String get tag => 'tr';
 
-  build() {
+  updateView() {
     final db = data.db;
 
     final children = [
@@ -46,7 +46,7 @@ class Entry extends Component<EntryProps> {
       ]));
     }
 
-    return vRoot(children: children);
+    updateRoot(vRoot(children: children));
   }
 }
 

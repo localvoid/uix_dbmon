@@ -6,8 +6,10 @@ part 'popover.g.dart';
 
 @ComponentMeta()
 class Popover extends Component<String> {
-  build() => vRoot(classes: const ['popover', 'left'])([
+  updateView() {
+    updateRoot(vRoot(classes: const ['popover', 'left'])([
       vElement('div', type: 'popover-content')(data),
       vElement('div', type: 'arrow')
-    ]);
+    ]));
+  }
 }

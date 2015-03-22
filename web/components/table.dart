@@ -10,7 +10,9 @@ part 'table.g.dart';
 class Table extends Component<List<Database>> {
   String get tag => 'table';
 
-  build() => vRoot(classes: const ['table', 'table-striped', 'latest-data'])(
-      vElement('tbody')(data.map((db) => vEntry(key: db.id, data: new EntryProps(db))))
-    );
+  updateView() {
+    updateRoot(vRoot(classes: const ['table', 'table-striped', 'latest-data'])(
+        vElement('tbody')(data.map((db) => vEntry(key: db.id, data: new EntryProps(db))))
+    ));
+  }
 }
