@@ -4,7 +4,7 @@ description: "DBMonster benchmark app: uix library."
 author: Boris Kaul <localvoid@gmail.com>
 homepage: https://github.com/localvoid/uix_dbmon
 environment:
-  sdk: '>=1.9.0-dev'
+  sdk: '>=1.9.1'
 dependencies:
   browser: any
   uix:
