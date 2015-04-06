@@ -2,9 +2,7 @@ library uix_dbmon.components.popover;
 
 import 'package:uix/uix.dart';
 
-part 'popover.g.dart';
-
-@ComponentMeta()
+$Popover() => new Popover();
 class Popover extends Component<String> {
   updateView() {
     updateRoot(vRoot(classes: const ['popover', 'left'])([

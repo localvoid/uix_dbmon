@@ -4,15 +4,13 @@ import 'package:uix/uix.dart';
 import '../data.dart';
 import 'popover.dart';
 
-part 'entry.g.dart';
-
 class EntryProps {
   final Database db;
 
   EntryProps(this.db);
 }
 
-@ComponentMeta()
+$Entry() => new Entry();
 class Entry extends Component<EntryProps> {
   String get tag => 'tr';
 
@@ -42,7 +40,7 @@ class Entry extends Component<EntryProps> {
       }
       children.add(vElement('td', type: 'Query', classes: classes)([
         vText(_formatElapsed(q.elapsed)),
-        vPopover(data: q.query)
+        vComponent($Popover, data: q.query)
       ]));
     }
 

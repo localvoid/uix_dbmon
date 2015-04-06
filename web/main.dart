@@ -22,7 +22,7 @@ void main() {
     dbs.add(new Database('cluster${i}slave'));
   }
 
-  final table = createTable(dbs);
+  final table = new Table()..data = dbs;
   injectComponent(table, html.document.body);
 
   new Timer.periodic(const Duration(milliseconds: 0), (_) {
